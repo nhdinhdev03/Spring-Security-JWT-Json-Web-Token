@@ -271,6 +271,7 @@ public class AuthController {
         return ResponseEntity.ok().body(new MessageResponse("Tài khoản đã được xác thực thành công."));
     }
 
+    /// cap nhat otp
     @PutMapping("/regenerate-otp")
     public ResponseEntity<?> regenerateOtp(@RequestBody Map<String, String> requestBody) {
         String email = requestBody.get("email");
